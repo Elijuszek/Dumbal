@@ -15,3 +15,7 @@ Deck = NodePath("Deck")
 
 [node name="Deck" parent="." instance=ExtResource("2_n2vir")]
 layout_mode = 1
+offset_left = 10.0
+offset_top = 480.0
+offset_right = 10.0
+offset_bottom = 480.0

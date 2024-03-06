@@ -5,7 +5,11 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o15i3"]
 bg_color = Color(1, 1, 1, 1)
-border_color = Color(0, 0, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.109804, 0.109804, 0.109804, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
