@@ -14,13 +14,10 @@ corner_radius_bottom_left = 10
 [node name="Card" type="Control" node_paths=PackedStringArray("Texture")]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 160.0
-offset_bottom = 256.0
 script = ExtResource("1_1fe81")
 Texture = NodePath("Container/Texture")
 
 [node name="Container" type="PanelContainer" parent="."]
-clip_contents = true
 layout_mode = 0
 offset_right = 160.0
 offset_bottom = 256.0

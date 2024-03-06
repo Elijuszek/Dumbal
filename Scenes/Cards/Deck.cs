@@ -4,7 +4,6 @@ namespace Dumbal;
 
 public partial class Deck : Control
 {
-    public Card LastCard { get; set; }
     private Array<Card> cards;
     private PackedScene cardScene = ResourceLoader.Load<PackedScene>("res://Scenes/Cards/Card.tscn");
     public override void _Ready()

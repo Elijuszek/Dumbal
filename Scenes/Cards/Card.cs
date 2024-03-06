@@ -10,7 +10,6 @@ public partial class Card : Control
     {
         base._Ready();
         string path = string.Format("res://Sprites/Cards/{0}_of_{1}.png", Value.ToString().ToLower(), Type.ToString().ToLower());
-        GD.Print(path);
         Texture.Texture = ResourceLoader.Load<Texture2D>(path);
     }
 }
