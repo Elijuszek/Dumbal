@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5ea0mkx7isj8"]
+
+[ext_resource type="Script" path="res://Scenes/Cards/Card.cs" id="1_1fe81"]
+[ext_resource type="Texture2D" uid="uid://b743pktm884p1" path="res://Sprites/Cards/jack_of_hearts.png" id="2_5a10l"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o15i3"]
+bg_color = Color(1, 1, 1, 1)
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Card" type="Control" node_paths=PackedStringArray("Texture")]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 160.0
+offset_bottom = 256.0
+script = ExtResource("1_1fe81")
+Texture = NodePath("Container/Texture")
+
+[node name="Container" type="PanelContainer" parent="."]
+clip_contents = true
+layout_mode = 0
+offset_right = 160.0
+offset_bottom = 256.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_o15i3")
+
+[node name="Texture" type="TextureRect" parent="Container"]
+layout_mode = 2
+texture = ExtResource("2_5a10l")
+expand_mode = 1

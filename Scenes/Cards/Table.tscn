@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bte42fqck4mn7"]
+
+[ext_resource type="Script" path="res://Scenes/Cards/Table.cs" id="1_edbgn"]
+[ext_resource type="PackedScene" uid="uid://bwqkm4jn025k2" path="res://Scenes/Cards/Deck.tscn" id="2_n2vir"]
+
+[node name="Table" type="Control" node_paths=PackedStringArray("Deck")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_edbgn")
+Deck = NodePath("Deck")
+
+[node name="Deck" parent="." instance=ExtResource("2_n2vir")]
+layout_mode = 1

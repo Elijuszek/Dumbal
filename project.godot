@@ -11,8 +11,8 @@ config_version=5
 [application]
 
 config/name="Dumbal"
-run/main_scene="res://Scenes/TitleScreen.tscn"
-config/features=PackedStringArray("4.2", "Mobile")
+run/main_scene="res://Scenes/UI/TitleScreen.tscn"
+config/features=PackedStringArray("4.2", "C#", "Mobile")
 
 [display]
 

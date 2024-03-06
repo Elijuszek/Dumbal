@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://chnrsivbuuegs"]
+
+[ext_resource type="Script" path="res://Scenes/UI/TitleScreen.cs" id="1_krnaf"]
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_krnaf")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 302.0
+offset_top = 179.0
+offset_right = 401.0
+offset_bottom = 202.0
+text = "dfgdfgdfgdfg"
