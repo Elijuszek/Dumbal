@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://chnrsivbuuegs"]
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 290.0
+offset_top = 196.0
+offset_right = 330.0
+offset_bottom = 219.0
+text = "dfgdfgdfgdfg"
