@@ -7,31 +7,40 @@ public partial class Table : Control
     public Card CurrentCard { get; set; }
 
     public Array<Player> players = new Array<Player>();
+
+    public Player currentPlayer;
     public override void _Ready()
     {
         base._Ready();
         Deck.Initialize();
         Deck.Shuffle();
-        AddChild(Deck.Take());
+        PreviousCard = Deck.Take();
+        PreviousCard.GlobalPosition = new Vector2(360, 640);
     }
 
 
     public void PlaceCard(Card placedCard)
     {
-        PreviousCard = CurrentCard;
         CurrentCard = placedCard;
     }
 
-    public void TakeLast()
-    {
 
+
+    public Card TakePrevious()
+    {
+        Card previous = PreviousCard;
+        PreviousCard = CurrentCard;
+        return previous;
     }
 
 
 
-    public void DrawFromDeck()
+    public Card DrawFromDeck()
     {
+        PreviousCard = CurrentCard;
 
+        // TODO: can return null
+        return Deck.Take();
     }
 
 }

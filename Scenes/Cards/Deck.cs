@@ -27,6 +27,10 @@ public partial class Deck : Control
 
     public Card Take()
     {
+        if (cards.Count == 0)
+        {
+            return null;
+        }
         Card card = cards.Last();
         cards.RemoveAt(cards.Count-1);
         return card;

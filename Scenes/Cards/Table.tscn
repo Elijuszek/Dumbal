@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bte42fqck4mn7"]
+[gd_scene load_steps=4 format=3 uid="uid://bte42fqck4mn7"]
 
 [ext_resource type="Script" path="res://Scenes/Cards/Table.cs" id="1_edbgn"]
 [ext_resource type="PackedScene" uid="uid://bwqkm4jn025k2" path="res://Scenes/Cards/Deck.tscn" id="2_n2vir"]
+[ext_resource type="PackedScene" uid="uid://pvmuiit2scpb" path="res://Scenes/UI/DragableCard.tscn" id="3_ebutx"]
 
 [node name="Table" type="Control" node_paths=PackedStringArray("Deck")]
 layout_mode = 3
@@ -14,8 +15,20 @@ script = ExtResource("1_edbgn")
 Deck = NodePath("Deck")
 
 [node name="Deck" parent="." instance=ExtResource("2_n2vir")]
-layout_mode = 1
-offset_left = 10.0
-offset_top = 480.0
-offset_right = 10.0
-offset_bottom = 480.0
+layout_mode = 0
+offset_left = 120.0
+offset_top = 640.0
+offset_right = 120.0
+offset_bottom = 640.0
+
+[node name="DragableCard" parent="." instance=ExtResource("3_ebutx")]
+offset_left = 392.0
+offset_top = 830.0
+offset_right = 392.0
+offset_bottom = 830.0
+
+[node name="DragableCard2" parent="." instance=ExtResource("3_ebutx")]
+offset_left = 527.0
+offset_top = 419.0
+offset_right = 527.0
+offset_bottom = 419.0

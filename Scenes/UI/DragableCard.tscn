@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://pvmuiit2scpb"]
+
+[ext_resource type="PackedScene" uid="uid://b5ea0mkx7isj8" path="res://Scenes/Cards/Card.tscn" id="1_tt6k8"]
+[ext_resource type="Script" path="res://Scenes/UI/DragableCard.cs" id="2_ubwft"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v0rx1"]
+size = Vector2(160, 256)
+
+[node name="DragableCard" node_paths=PackedStringArray("touchButton") instance=ExtResource("1_tt6k8")]
+script = ExtResource("2_ubwft")
+touchButton = NodePath("TouchScreenButton")
+
+[node name="Container" parent="." index="0"]
+mouse_filter = 1
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="." index="1"]
+shape = SubResource("RectangleShape2D_v0rx1")
+
+[connection signal="pressed" from="TouchScreenButton" to="." method="TouchButtonPressed"]
+[connection signal="released" from="TouchScreenButton" to="." method="TouchButtonReleased"]

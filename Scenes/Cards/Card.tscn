@@ -22,9 +22,18 @@ script = ExtResource("1_1fe81")
 Texture = NodePath("Container/Texture")
 
 [node name="Container" type="PanelContainer" parent="."]
-layout_mode = 0
-offset_right = 160.0
-offset_bottom = 256.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -128.0
+offset_right = 80.0
+offset_bottom = 128.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_o15i3")
 
 [node name="Texture" type="TextureRect" parent="Container"]
