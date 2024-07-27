@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Dumbal"
 run/main_scene="res://Scenes/Cards/Table.tscn"
-config/features=PackedStringArray("4.2", "C#", "Mobile")
+config/features=PackedStringArray("4.3", "C#", "Mobile")
 
 [display]
 

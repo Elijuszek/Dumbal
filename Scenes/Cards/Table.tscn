@@ -1,10 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://bte42fqck4mn7"]
+[gd_scene load_steps=5 format=3 uid="uid://bte42fqck4mn7"]
 
 [ext_resource type="Script" path="res://Scenes/Cards/Table.cs" id="1_edbgn"]
 [ext_resource type="PackedScene" uid="uid://bwqkm4jn025k2" path="res://Scenes/Cards/Deck.tscn" id="2_n2vir"]
 [ext_resource type="PackedScene" uid="uid://pvmuiit2scpb" path="res://Scenes/UI/DragableCard.tscn" id="3_ebutx"]
+[ext_resource type="Script" path="res://Client.cs" id="4_ntqkd"]
 
-[node name="Table" type="Control" node_paths=PackedStringArray("Deck")]
+[node name="Table" type="Control" node_paths=PackedStringArray("Deck", "httpClient")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,6 +14,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_edbgn")
 Deck = NodePath("Deck")
+httpClient = NodePath("HTTPRequest")
 
 [node name="Deck" parent="." instance=ExtResource("2_n2vir")]
 layout_mode = 0
@@ -32,3 +34,7 @@ offset_left = 527.0
 offset_top = 419.0
 offset_right = 527.0
 offset_bottom = 419.0
+
+[node name="HTTPRequest" type="HTTPRequest" parent="." node_paths=PackedStringArray("table")]
+script = ExtResource("4_ntqkd")
+table = NodePath("..")

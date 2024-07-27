@@ -1,6 +1,5 @@
 using Godot;
 using System;
-
 public partial class Player : Node
 {
     public string Username { get; set; }

@@ -9,6 +9,8 @@ public partial class Table : Control
     public Array<Player> players = new Array<Player>();
 
     public Player currentPlayer;
+
+    [Export] public Client httpClient { get; set; }
     public override void _Ready()
     {
         base._Ready();
@@ -23,8 +25,6 @@ public partial class Table : Control
     {
         CurrentCard = placedCard;
     }
-
-
 
     public Card TakePrevious()
     {
@@ -43,4 +43,8 @@ public partial class Table : Control
         return Deck.Take();
     }
 
+    public void SendData(DragableCard card)
+    {
+        httpClient.SendCardPosition(card);
+    }
 }

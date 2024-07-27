@@ -24,5 +24,13 @@ public partial class DragableCard : Card
     private void TouchButtonReleased()
     {
         SetProcess(false);
+        SendData();
+    }
+
+    private void SendData()
+    {
+        Table table = GetParent<Table>();
+        GD.Print(this);
+        table.SendData(this);
     }
 }
